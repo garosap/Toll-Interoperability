@@ -1,0 +1,95 @@
+.appContainer {
+    background-color: #292627;
+    /* min-height: 100vh; */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    margin-left: auto;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: calc(10px + 2vmin);
+    background: rgb(190, 190, 190);
+    /* background: linear-gradient(
+        45deg,
+        rgb(190, 190, 190) 0%,
+        rgb(190, 190, 190) 100%
+    ); */
+
+    color: white;
+}
+
+.selectorContainer {
+    background-color: #292627;
+    height: 70vh;
+    max-width: 50vw;
+    aspect-ratio: 0.7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1vw;
+    /* font-size: calc(10px + 2vmin); */
+    background: rgb(42, 43, 42);
+
+    color: white;
+}
+
+.header {
+    font-size: 120%;
+    font-weight: bolder;
+    top: 10%;
+}
+
+.selectionBox {
+    width: 80%;
+    aspect-ratio: 2.5;
+    background-color: rgb(147, 146, 141);
+    border-radius: 1vw;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+  flex:5;
+    font-size: 100%;
+    font-weight: 400;
+    /* top: 10%; */
+    position: relative;
+    left: 5%;
+    color: rgb(42, 43, 42);
+}
+
+.selectorIcon {
+  flex:1;
+    /* height: 50%; */
+    aspect-ratio: 1;
+    background-color: rgb(81, 80, 83);
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5%;
+    cursor: pointer;
+
+}
+
+.icon {
+  width: 40%;
+  height: 40%;
+}
+
+.selectorIcon:hover {
+  transform: scale(1.1); /*(150% zoom - Note: if the zoom is too large, it will go outside of the viewport)*/
+}

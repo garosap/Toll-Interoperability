@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Εγνατία οδός",
+        "title": "egnatia",
+        "abbreviation": "EG"
+    },
+    {
+        "name": "Αττική οδός",
+        "title": "aodos",
+        "abbreviation": "AO"
+    },
+    {
+        "name": "Νέα οδός",
+        "title": "nea_odos",
+        "abbreviation": "NE"
+    },
+    {
+        "name": "Ολυμπία οδός",
+        "title": "olympia_odos",
+        "abbreviation": "OO"
+    },
+    {
+        "name": "Κεντρική οδός",
+        "title": "kentriki_odos",
+        "abbreviation": "KO"
+    },
+    {
+        "name": "Γέφυρα",
+        "title": "gefyra",
+        "abbreviation": "GF"
+    },
+    {
+        "name": "Μορέας",
+        "title": "moreas",
+        "abbreviation": "MR"
+    }
+]

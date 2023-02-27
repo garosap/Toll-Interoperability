@@ -1,0 +1,28 @@
+{
+  "name": "tlbackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test_backend": "env-cmd -f ./configuration/test.env jest ./tests_backend",
+    "test_api": "env-cmd -f ./configuration/test.env jest ./tests_api",
+    "start": "env-cmd -f ./configuration/dev.env nodemon src/index.js",
+    "test_cli":"env-cmd -f ./configuration/test.env nodemon src/index.js"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "env-cmd": "^10.1.0",
+    "express": "^4.17.2",
+    "moment": "^2.29.1",
+    "mongoose": "^6.1.2"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6"
+  }
+}

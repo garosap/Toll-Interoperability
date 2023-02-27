@@ -1,0 +1,8 @@
+#!/bin/bash
+./$@
+
+# Uses bash to run the command ./ + the arguments given in the terminal, e.g:
+# $ ./se2123 healthcheck --format json
+# results in running:
+# $ ./healthcheck --format json
+# which gives the desired output based on our CLI.

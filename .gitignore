@@ -1,0 +1,73 @@
+#################################################
+# CC++
+
+# Prerequisites
+.d
+
+# Compiled Object files
+.o
+.obj
+
+# Shared objects (inc. Windows DLLs)
+.dll
+.so
+.so.
+
+# Compiled Static libraries
+.lib
+
+# Executables
+.exe
+.out
+.app
+
+#################################################
+# Python
+
+# Byte-compiled  optimized  DLL files
+__pycache__
+.pytest_cache
+
+# Installer logs
+pip-log.txt
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default
+ipython_config.py
+
+#################################################
+# Node
+
+# Logs
+logs
+.log
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Dependency directories
+node_modules
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarncache
+.yarnunplugged
+.yarnbuild-state.yml
+.yarninstall-state.gz
+.pnp.
+
+#################################################
+# Misc
+configuration
+.DS_Store

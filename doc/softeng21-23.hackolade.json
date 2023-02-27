@@ -1,0 +1,406 @@
+{
+    "modelName": "New Model",
+    "collections": [
+        {
+            "collectionName": "vehicles",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "vehicleID",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "e5dd5240-6277-11ec-a993-652b9aaf45d0",
+                    "primaryKey": true,
+                    "childRelationships": [
+                        "c7a3a4a0-627c-11ec-a993-652b9aaf45d0"
+                    ]
+                },
+                {
+                    "name": "tagID",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "04a56af0-6278-11ec-a993-652b9aaf45d0",
+                    "error": {}
+                },
+                {
+                    "name": "tagProvider",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "097fa2c0-6278-11ec-a993-652b9aaf45d0",
+                    "error": {}
+                },
+                {
+                    "name": "providerAbbr",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "2cf1e290-6278-11ec-a993-652b9aaf45d0",
+                    "error": {}
+                },
+                {
+                    "name": "licenseYear",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "36a281a0-6278-11ec-a993-652b9aaf45d0",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "4689a110-6260-11ec-a993-652b9aaf45d0"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "468952f0-6260-11ec-a993-652b9aaf45d0",
+            "bucketId": "1fee34d0-6260-11ec-a993-652b9aaf45d0"
+        },
+        {
+            "collectionName": "passes",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "passID",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "4fd6af70-6278-11ec-a993-652b9aaf45d0",
+                    "primaryKey": true
+                },
+                {
+                    "name": "timestamp",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "GUID": "5d5baf10-6278-11ec-a993-652b9aaf45d0",
+                    "error": {}
+                },
+                {
+                    "name": "stationRef",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "6e001720-6278-11ec-a993-652b9aaf45d0",
+                    "error": {},
+                    "foreignCollection": "62302e70-6260-11ec-a993-652b9aaf45d0",
+                    "foreignField": [
+                        "62302e70-6260-11ec-a993-652b9aaf45d0",
+                        "3dddb3e0-6278-11ec-a993-652b9aaf45d0"
+                    ],
+                    "relationshipType": "Foreign Key"
+                },
+                {
+                    "name": "vehicleRef",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "76a51290-6278-11ec-a993-652b9aaf45d0",
+                    "error": {},
+                    "relationshipType": "Foreign Key",
+                    "foreignCollection": "468952f0-6260-11ec-a993-652b9aaf45d0",
+                    "foreignField": [
+                        "468952f0-6260-11ec-a993-652b9aaf45d0",
+                        "e5dd5240-6277-11ec-a993-652b9aaf45d0"
+                    ]
+                },
+                {
+                    "name": "charge",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "7cb72e20-6278-11ec-a993-652b9aaf45d0",
+                    "error": {}
+                },
+                {
+                    "name": "tagAbbr",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "83efef60-6278-11ec-a993-652b9aaf45d0",
+                    "error": {}
+                },
+                {
+                    "name": "home",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "boolean",
+                    "GUID": "4d0598a0-6279-11ec-a993-652b9aaf45d0",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "515cee30-6260-11ec-a993-652b9aaf45d0"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "515cc720-6260-11ec-a993-652b9aaf45d0",
+            "bucketId": "1fee34d0-6260-11ec-a993-652b9aaf45d0"
+        },
+        {
+            "collectionName": "stations",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "stationID",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "3dddb3e0-6278-11ec-a993-652b9aaf45d0",
+                    "primaryKey": true,
+                    "childRelationships": [
+                        "99ce3ea0-627c-11ec-a993-652b9aaf45d0"
+                    ]
+                },
+                {
+                    "name": "stationProvider",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "457c3bd0-6278-11ec-a993-652b9aaf45d0",
+                    "error": {}
+                },
+                {
+                    "name": "stationName",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "4ae79010-6278-11ec-a993-652b9aaf45d0",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "62305580-6260-11ec-a993-652b9aaf45d0"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "62302e70-6260-11ec-a993-652b9aaf45d0",
+            "bucketId": "1fee34d0-6260-11ec-a993-652b9aaf45d0"
+        }
+    ],
+    "buckets": [
+        {
+            "name": "tolls",
+            "type": "bucket",
+            "collectionIds": [
+                "468952f0-6260-11ec-a993-652b9aaf45d0",
+                "515cc720-6260-11ec-a993-652b9aaf45d0",
+                "62302e70-6260-11ec-a993-652b9aaf45d0"
+            ],
+            "backgroundColor": {
+                "r": 216,
+                "g": 0,
+                "b": 115,
+                "a": 1
+            },
+            "show": true,
+            "isActivated": true,
+            "GUID": "1fee34d0-6260-11ec-a993-652b9aaf45d0"
+        }
+    ],
+    "views": [],
+    "relationships": [
+        {
+            "name": "vehicleRelation",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "62302e70-6260-11ec-a993-652b9aaf45d0",
+                    "3dddb3e0-6278-11ec-a993-652b9aaf45d0"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "515cc720-6260-11ec-a993-652b9aaf45d0",
+                    "6e001720-6278-11ec-a993-652b9aaf45d0"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "99ce3ea0-627c-11ec-a993-652b9aaf45d0",
+            "parentCollection": "62302e70-6260-11ec-a993-652b9aaf45d0",
+            "childCollection": "515cc720-6260-11ec-a993-652b9aaf45d0"
+        },
+        {
+            "name": "New Relationship",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "468952f0-6260-11ec-a993-652b9aaf45d0",
+                    "e5dd5240-6277-11ec-a993-652b9aaf45d0"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "515cc720-6260-11ec-a993-652b9aaf45d0",
+                    "76a51290-6278-11ec-a993-652b9aaf45d0"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "c7a3a4a0-627c-11ec-a993-652b9aaf45d0",
+            "parentCollection": "468952f0-6260-11ec-a993-652b9aaf45d0",
+            "childCollection": "515cc720-6260-11ec-a993-652b9aaf45d0"
+        }
+    ],
+    "users": [],
+    "diagramViews": [],
+    "idToNameHashTable": {
+        "1fee34d0-6260-11ec-a993-652b9aaf45d0": "tolls",
+        "468952f0-6260-11ec-a993-652b9aaf45d0": "vehicles",
+        "515cc720-6260-11ec-a993-652b9aaf45d0": "passes",
+        "62302e70-6260-11ec-a993-652b9aaf45d0": "stations",
+        "e5dd5240-6277-11ec-a993-652b9aaf45d0": "vehicleID",
+        "097fa2c0-6278-11ec-a993-652b9aaf45d0": "tagProvider",
+        "2cf1e290-6278-11ec-a993-652b9aaf45d0": "providerAbbr",
+        "36a281a0-6278-11ec-a993-652b9aaf45d0": "licenseYear",
+        "457c3bd0-6278-11ec-a993-652b9aaf45d0": "stationProvider",
+        "4ae79010-6278-11ec-a993-652b9aaf45d0": "stationName",
+        "4d0598a0-6279-11ec-a993-652b9aaf45d0": "home",
+        "04a56af0-6278-11ec-a993-652b9aaf45d0": "tagID",
+        "3dddb3e0-6278-11ec-a993-652b9aaf45d0": "stationID",
+        "4fd6af70-6278-11ec-a993-652b9aaf45d0": "passID",
+        "5d5baf10-6278-11ec-a993-652b9aaf45d0": "timestamp",
+        "6e001720-6278-11ec-a993-652b9aaf45d0": "stationRef",
+        "76a51290-6278-11ec-a993-652b9aaf45d0": "vehicleRef",
+        "7cb72e20-6278-11ec-a993-652b9aaf45d0": "charge",
+        "83efef60-6278-11ec-a993-652b9aaf45d0": "tagAbbr",
+        "99ce3ea0-627c-11ec-a993-652b9aaf45d0": "vehicleRelation",
+        "c7a3a4a0-627c-11ec-a993-652b9aaf45d0": "New Relationship"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "18bf5ea0-6260-11ec-a993-652b9aaf45d0"
+    },
+    "polyglotDefinitions": {
+        "type": "polyglotDefinitions",
+        "properties": [],
+        "GUID": "18bf5ea2-6260-11ec-a993-652b9aaf45d0"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [],
+        "GUID": "18bf5ea1-6260-11ec-a993-652b9aaf45d0"
+    },
+    "sources": [],
+    "decorativeSymbols": [],
+    "dbVersion": "v4.4",
+    "dbVendor": "MongoDB",
+    "appTarget": "MONGODB",
+    "creationTS": "2021-12-21T13:15:41.320Z",
+    "GUID": "18bf1080-6260-11ec-a993-652b9aaf45d0",
+    "isLineageEnabled": false,
+    "lastModifTS": "2021-12-21T16:42:49.387Z",
+    "persistenceSchemaVersion": "5",
+    "isCreatedByPlugin": true,
+    "pluginInformation": {
+        "pluginEngineVersion": "1.0.0"
+    },
+    "applicationInformation": {
+        "version": "5.2.10"
+    },
+    "hackoladeMeta": {},
+    "settings": {
+        "centralPane": {
+            "dbLevel": {
+                "erd": [
+                    {
+                        "GUID": "468952f0-6260-11ec-a993-652b9aaf45d0",
+                        "x": 80,
+                        "y": 80,
+                        "width": 197,
+                        "height": 123,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "515cc720-6260-11ec-a993-652b9aaf45d0",
+                        "x": 333,
+                        "y": 164,
+                        "width": 189,
+                        "height": 159,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "62302e70-6260-11ec-a993-652b9aaf45d0",
+                        "x": 574,
+                        "y": 92,
+                        "width": 208,
+                        "height": 87,
+                        "color": {}
+                    }
+                ],
+                "buckets": [
+                    {
+                        "x": 40,
+                        "y": 40,
+                        "GUID": "1fee34d0-6260-11ec-a993-652b9aaf45d0"
+                    }
+                ],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
+                "graphView": {
+                    "erd": [],
+                    "buckets": [],
+                    "decorativeSymbols": [],
+                    "forceLayout": true,
+                    "defaultLinkLength": 300
+                },
+                "diagramViews": [],
+                "decorativeSymbols": [],
+                "nestedCollectionsLayout": "horizontal",
+                "options": []
+            },
+            "collectionLevel": {},
+            "changed": false
+        },
+        "dtDiagram": {
+            "collapsedNodes": [],
+            "shouldDistributeCollections": false
+        }
+    }
+}

@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "e2af1962-6f6b-4804-8f6c-97f32d547768",
+		"name": "softEng",
+		"description": "The softEng API is responsible for the interoperability on motorway tolls. It provides endpoints for retrieving information about all stations of each toll provider, like the amount of money each provider owes to the other and when and which vehicles passed from a specific station.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PassesPerStation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9103/interoperability/api/PassesPerStation/KO01/20190312/20290312?format=json",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"interoperability",
+						"api",
+						"PassesPerStation",
+						"KO01",
+						"20190312",
+						"20290312"
+					],
+					"query": [
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				},
+				"description": "Returns all the passes for a station in a specific period with station id and period provided in the params of the url."
+			},
+			"response": []
+		},
+		{
+			"name": "PassesAnalysis",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9103/interoperability/api/PassesAnalysis/aodos/kentriki_odos/20211005/20211110?format=json",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"interoperability",
+						"api",
+						"PassesAnalysis",
+						"aodos",
+						"kentriki_odos",
+						"20211005",
+						"20211110"
+					],
+					"query": [
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				},
+				"description": "Returns all the passes between two toll providers in a specific period with ids and period provided in the params of the url."
+			},
+			"response": []
+		},
+		{
+			"name": "PassesCost",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9103/interoperability/api/PassesCost/aodos/gefyra/20211005/20211110?format=json",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"interoperability",
+						"api",
+						"PassesCost",
+						"aodos",
+						"gefyra",
+						"20211005",
+						"20211110"
+					],
+					"query": [
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				},
+				"description": "Returns the amount of money op2_ID owes to op1_ID in a specific period with ids and period provided in the params of the url."
+			},
+			"response": []
+		},
+		{
+			"name": "ChargesBy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9103/interoperability/api/ChargesBy/aodos/20191005/20211110?format=json",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"interoperability",
+						"api",
+						"ChargesBy",
+						"aodos",
+						"20191005",
+						"20211110"
+					],
+					"query": [
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				},
+				"description": "Returns the amount of money each visiting operator owes to a specific operator in a period, with operator id and period provided in the params of the url."
+			},
+			"response": []
+		},
+		{
+			"name": "admin/healthcheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9103/interoperability/api/admin/healthcheck",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"interoperability",
+						"api",
+						"admin",
+						"healthcheck"
+					]
+				},
+				"description": "Checks if there is connection with database."
+			},
+			"response": []
+		},
+		{
+			"name": "OperatorBalances",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9103/interoperability/api/OperatorBalances/aodos/20191005/20201110?format=json",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"interoperability",
+						"api",
+						"OperatorBalances",
+						"aodos",
+						"20191005",
+						"20201110"
+					],
+					"query": [
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "YearlyPassesCount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9103/interoperability/api/YearlyPassesCount/aodos/egnatia/20210101/20211231?format=json",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"interoperability",
+						"api",
+						"YearlyPassesCount",
+						"aodos",
+						"egnatia",
+						"20210101",
+						"20211231"
+					],
+					"query": [
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/admin/resetpasses",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:9103/interoperability/api/admin/resetpasses",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"interoperability",
+						"api",
+						"admin",
+						"resetpasses"
+					]
+				},
+				"description": "Initialize pass collection in database."
+			},
+			"response": []
+		},
+		{
+			"name": "/admin/resetstations",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:9103/interoperability/api/admin/resetstations",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"interoperability",
+						"api",
+						"admin",
+						"resetstations"
+					]
+				},
+				"description": "Initialize station collection in database."
+			},
+			"response": []
+		},
+		{
+			"name": "/admin/resetvehicles",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:9103/interoperability/api/admin/resetvehicles",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"interoperability",
+						"api",
+						"admin",
+						"resetvehicles"
+					]
+				},
+				"description": "Initialize vehicle collection in database."
+			},
+			"response": []
+		},
+		{
+			"name": "admin/passesupd",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:9103/interoperability/api/admin/passesupd?filepath=/filepath/passes.csv",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"interoperability",
+						"api",
+						"admin",
+						"passesupd"
+					],
+					"query": [
+						{
+							"key": "filepath",
+							"value": "/filepath/passes.csv"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+import argparse
+import requests
+
+my_parser = argparse.ArgumentParser(description='initializes pass collection in database')
+args = my_parser.parse_args()
+
+try:
+    r = requests.post('http://127.0.0.1:9103/interoperability/api/admin/resetpasses')
+    if(r.status_code == 200):
+        print('200: Success')
+    elif(r.status_code == 500):
+        print('500: Internal server error')
+    print(r.json())
+except Exception as e:
+    print(e)
