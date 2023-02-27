@@ -1,4 +1,4 @@
-# Software Engineering team
+# Software Engineering semester project
 
 ## Project concept
 This project's goal is to produce software that is responsible for the interoperability on motorway tolls.
